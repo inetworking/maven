@@ -1,0 +1,6 @@
+#!/bin/bash
+DIR="$(cd "$(dirname "$0")" && pwd)"
+MAVEN_HOME="$(cd "$DIR" && pwd)"
+echo -e "export MAVEN_HOME=${MAVEN_HOME}">>/etc/profile
+echo -e 'export PATH=${MAVEN_HOME}/bin:$PATH'>>/etc/profile
+source /etc/profile
